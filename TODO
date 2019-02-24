@@ -1,0 +1,4 @@
+pos_session
+  eliminate 'pos_session' level
+  (pos/sql/pos_session.js)
+
