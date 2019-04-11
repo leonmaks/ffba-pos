@@ -1,6 +1,14 @@
-select * from ffba_pos order by ident
+DOWN
+  elta_00003
+  id= 3
+  siteguid= 7e1b1f6a-e7f8-4e7d-acf4-8a25604c0b3c
+from_
+  eltapos_003
+  id= 5
+  siteguid= 34892ae3-3656-4601-92a3-16ba73b14dcb
 ;
-elta_00003 (3)
+
+select * from ffba_pos order by ident
 ;
 
 

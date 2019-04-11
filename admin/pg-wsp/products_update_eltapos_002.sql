@@ -1,9 +1,13 @@
-UPDATE
-  products
-  eltapos_002 (4)
-;
+UPDATE PRODUCTS
+  eltapos_002
+  id= 4
+  siteguid= 87011394-b5a6-46bf-b332-ca2f78b569f1
 
-siteguid:   87011394-b5a6-46bf-b332-ca2f78b569f1
+FROM
+  eltapos_003
+  id= 5
+  siteguid= 34892ae3-3656-4601-92a3-16ba73b14dcb
+;
 
 
 select
@@ -14,7 +18,7 @@ select
 from
   r$_products
 where
-  siteguid = '99999'
+  siteguid = '34892ae3-3656-4601-92a3-16ba73b14dcb'
 EXCEPT
 select
   id, reference, code, codetype, "name", pricebuy, pricesell, category, taxcat, attributeset_id, stockcost,

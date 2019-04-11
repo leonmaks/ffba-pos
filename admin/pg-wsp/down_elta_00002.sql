@@ -63,6 +63,11 @@ select * from r$d003_00002_products
 select * from r$u003_00002_taxcategories
 ;
 
+select taxcat, count(*) from r$_products where siteguid = 'ffcf5815-b7ef-4b9b-bc8f-14f6f04c59e6' group by taxcat
+;
+
+
+
 
 insert into r$d003_00003_products (
   id, reference, code, codetype, "name", pricebuy, pricesell, category, taxcat, attributeset_id, stockcost,
