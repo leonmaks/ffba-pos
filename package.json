@@ -26,6 +26,7 @@
     "bluebird": "^3.5.3",
     "command-line-args": "^5.0.2",
     "command-line-usage": "^5.0.5",
+    "cosmiconfig": "^5.2.0",
     "import-lazy": "^3.1.0",
     "joi": "^14.3.1",
     "module-alias": "^2.2.0",
