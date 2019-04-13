@@ -7,9 +7,8 @@ const pos = require("../sql/pos")
 
 const selectAll = async (db, params) => db.any(pos.select_all, {
   ...params,
-  where: sjoin(params.where, " AND ", "WHERE "),
+  where: sjoin(params.where, {sep: " AND ", fore: "WHERE "}),
 })
-
 
 const selectByIdent = async (db, params) => db.one(pos.select_by_ident, params)
 

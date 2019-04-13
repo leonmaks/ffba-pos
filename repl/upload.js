@@ -167,9 +167,10 @@ module.exports = async (db, params) => db.task("upload", async ts_ => {
   for await (const p_ of points_) {
 
     // WHERE for Tables
+    // sep = ", ", fore = "", tail = "", dflt = ""
     const where_t_ = ["r.last_repl_up_id > coalesce(r.last_upld_srv_id, 0)"]
     if (params.tables) {
-      where_t_.push(`r.table_name in (${sjoin(params.tables, "', '", "'", "'")})`)
+      where_t_.push(`r.table_name in (${sjoin(params.tables, { sep: "', '", fore: "'", tail: "'" })})`)
     }
     const tables_ = await select_by_pos_with_def(ts_, {
       pos_id: p_.id,
