@@ -7,10 +7,11 @@ const commandLineUsage = require("command-line-usage")
 
 const importLazy = require("import-lazy")(require)
 
-const { env, error } = require("tittles")
+const { config, error } = require("tittles")
 const pgp = require("./db")
 
 const {
+  MODULE_NAME,
   POS_HOME,
   POS_HOME_DEFAULT,
   command,
@@ -18,10 +19,6 @@ const {
 } = require("./defs")
 
 const upload = importLazy("@repl/upload")
-
-
-env()
-
 
 const optionDefinitions = [
   {
@@ -54,8 +51,16 @@ const optionDefinitions = [
   },
 ]
 
-
 const main = async () => {
+
+  // read config
+  //
+  const config_ = await config.read(MODULE_NAME)
+  // TODO: +check if config_ is undefined
+  console.log("config_=", config_)
+
+  console.log("exitting with status 1 (interrupt)")
+  return 1
 
   const ctx = {
     srv: {
@@ -136,6 +141,5 @@ const main = async () => {
     ctx.srv.db && ctx.srv.db.$pool.end()
   }
 }
-
 
 if (!module.parent) { main() }

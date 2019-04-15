@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Upload",
-            "program": "${workspaceFolder}\\main.js",
+            "program": "${workspaceFolder}\\index.js",
             "args": [
                 "-u",
                 "-P",

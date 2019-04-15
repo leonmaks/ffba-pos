@@ -1,8 +1,8 @@
 "use strict"
 
-
-
 module.exports = {
+
+  MODULE_NAME: "ffba-pos",
 
   command: {
     UPLOAD: 1,
@@ -12,5 +12,4 @@ module.exports = {
   POS_HOME_DEFAULT: "C:\\ffba-pos",
 
   SRV_DB_CONN_PARAMS: "SRV_DB_CONN_PARAMS",
-
 }
