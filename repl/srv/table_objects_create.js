@@ -2,10 +2,8 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const table_create = importLazy("@db/cat/table_create")
-const { insert: repl_table_insert } = importLazy("./dal/repl_table")
+const table_create = require("@db/cat/table_create")
+const { insert: repl_table_insert } = require("./dal/repl_table")
 
 
 const {

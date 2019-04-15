@@ -2,12 +2,10 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const { errors } = importLazy("@db/defs")
-const table_drop = importLazy("@db/cat/table_drop")
-const function_drop = importLazy("@db/cat/function_drop")
-const trigger_drop = importLazy("@db/cat/trigger_drop")
+const { errors } = require("@db/defs")
+const table_drop = require("@db/cat/table_drop")
+const function_drop = require("@db/cat/function_drop")
+const trigger_drop = require("@db/cat/trigger_drop")
 
 const {
   CLI_REPL_TABLE_PFX,
@@ -17,7 +15,7 @@ const {
   REPL_TRIG_AI_PFX,
   REPL_TRIG_AU_PFX,
   REPL_TRIG_BD_PFX,
-} = importLazy("../defs")
+} = require("../defs")
 
 
 // Drop the replication objects for the table

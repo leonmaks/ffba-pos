@@ -2,10 +2,8 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const cli_objects_drop = importLazy("./cli/objects_drop")
-const srv_objects_drop = importLazy("./srv/objects_drop")
+const cli_objects_drop = require("./cli/objects_drop")
+const srv_objects_drop = require("./srv/objects_drop")
 
 
 

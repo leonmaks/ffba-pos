@@ -2,9 +2,7 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const { select_by_pos_with_def } = importLazy("./dal/repl_table")
+const { select_by_pos_with_def } = require("./dal/repl_table")
 
 
 

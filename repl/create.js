@@ -2,10 +2,8 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const cli_objects_create = importLazy("./cli/objects_create")
-const srv_objects_create = importLazy("./srv/objects_create")
+const cli_objects_create = require("./cli/objects_create")
+const srv_objects_create = require("./srv/objects_create")
 
 
 

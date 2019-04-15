@@ -2,14 +2,12 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const trigger_create = importLazy("@db/cat/trigger_create")
+const trigger_create = require("@db/cat/trigger_create")
 
 const {
   REPL_FUNC_BD_PFX,
   REPL_TRIG_BD_PFX,
-} = importLazy("../defs")
+} = require("../defs")
 
 
 

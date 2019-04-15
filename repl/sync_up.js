@@ -4,18 +4,15 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const columns = importLazy("@db/cat/columns")
-const insertRecords = importLazy("@db/helpers/insert_records")
+const columns = require("@db/cat/columns")
+const insertRecords = require("@db/helpers/insert_records")
 
 const {
   REPL_COL_ID,
   CLI_REPL_TABLE_PFX,
-} = importLazy("./defs")
+} = require("./defs")
 
-const repl_table_list = importLazy("./srv/repl_table_with_def_list")
-
+const repl_table_list = require("./srv/repl_table_with_def_list")
 
 
 module.exports = async (ctx) => {

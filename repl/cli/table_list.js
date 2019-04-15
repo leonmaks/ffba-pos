@@ -2,14 +2,12 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const own_tables = importLazy("@db/cat/own_tables")
+const own_tables = require("@db/cat/own_tables")
 
 const {
   CLI_REPL_TABLE_PFX,
   CLI_REPL_TABLE_PFX_LEN
-} = importLazy("../defs")
+} = require("../defs")
 
 
 

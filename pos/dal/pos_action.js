@@ -4,13 +4,11 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
 const {
   run_select,
   run_update,
   run_log_insert,
-} = importLazy("../sql/pos_action")
+} = require("../sql/pos_action")
 
 
 const runSelect = async (db, params) => db.any(run_select, params)

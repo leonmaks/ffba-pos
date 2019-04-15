@@ -2,10 +2,8 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const pos = importLazy("./dal/pos")
-const pos_session = importLazy("./dal/pos_session")
+const pos = require("./dal/pos")
+const pos_session = require("./dal/pos_session")
 
 
 

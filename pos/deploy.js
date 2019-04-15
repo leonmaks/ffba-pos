@@ -4,22 +4,20 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const path = importLazy("path")
-const fs = importLazy("fs")
-const fs_extra = importLazy("fs-extra")
+const path = require("path")
+const fs = require("fs")
+const fs_extra = require("fs-extra")
 
 const {
   deployStatus,
-} = importLazy("./defs")
+} = require("./defs")
 
 const {
   deploySelect,
   deployStatusUpdate,
   pathTreeSelect,
   log
-} = importLazy("./dal/pos_deploy")
+} = require("./dal/pos_deploy")
 
 
 const deployFile = async (db, params) => {

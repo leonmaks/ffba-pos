@@ -2,12 +2,10 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
+const { errors } = require("@db/defs")
+const table_drop = require("@db/cat/table_drop")
 
-const { errors } = importLazy("@db/defs")
-const table_drop = importLazy("@db/cat/table_drop")
-
-const { delete: repl_table_delete } = importLazy("./dal/repl_table")
+const { delete: repl_table_delete } = require("./dal/repl_table")
 
 
 

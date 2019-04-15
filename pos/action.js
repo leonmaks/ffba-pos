@@ -9,25 +9,24 @@
 
 const util = require("util")
 const exec = util.promisify(require("child_process").exec)
-const importLazy = require("import-lazy")(require)
 
 // const path = require("path")
 // const fs = require("fs")
 // const fs_extra = require("fs-extra")
 
-const error = importLazy("@tittles/error")
+const error = require("@tittles/error")
 
 const {
   actionType,
   runMode,
   runStatus,
-} = importLazy("./defs")
+} = require("./defs")
 
 const {
   runSelect,
   runUpdate,
   runLogInsert,
-} = importLazy("./dal/pos_action")
+} = require("./dal/pos_action")
 
 
 const os_command = async (command) => {

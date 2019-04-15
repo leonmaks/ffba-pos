@@ -18,21 +18,14 @@
     "url": "https://github.com/leonmaks/ffba-pos/issues"
   },
   "homepage": "https://github.com/leonmaks/ffba-pos#readme",
-  "_moduleAliases": {
-    "@root": ".",
-    "@pos": "pos",
-    "@repl": "repl"
-  },
   "dependencies": {
     "bluebird": "^3.5.3",
     "command-line-args": "^5.0.2",
     "command-line-usage": "^5.0.5",
-    "cosmiconfig": "^5.2.0",
-    "import-lazy": "^3.1.0",
+    "fs-extra": "^7.0.1",
     "joi": "^14.3.1",
-    "module-alias": "^2.2.0",
     "pg-monitor": "^1.1.0",
-    "pg-utl": "^0.0.3",
-    "tittles": "^0.0.3"
+    "pg-utl": "^0.0.9",
+    "tittles": "^0.0.7"
   }
 }

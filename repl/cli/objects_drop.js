@@ -4,10 +4,8 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const repl_existing_list = importLazy("./repl_existing_list")
-const table_objects_drop = importLazy("./table_objects_drop")
+const repl_existing_list = require("./repl_existing_list")
+const table_objects_drop = require("./table_objects_drop")
 
 
 

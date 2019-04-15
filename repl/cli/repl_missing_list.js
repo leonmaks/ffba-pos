@@ -2,12 +2,10 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
+const array = require("@tittles/array")
+const da = require("@tittles/dicarray")
 
-const array = importLazy("@tittles/array")
-const da = importLazy("@tittles/dicarray")
-
-const table_list = importLazy("./table_list")
+const table_list = require("./table_list")
 
 
 

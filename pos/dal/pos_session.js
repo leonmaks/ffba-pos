@@ -2,9 +2,7 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const { pos_session } = importLazy("../sql/pos_session")
+const { pos_session } = require("../sql/pos_session")
 
 
 const begin = async (db, params) => db.one(pos_session.insert_on_open, params)

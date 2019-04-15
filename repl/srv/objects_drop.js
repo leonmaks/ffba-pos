@@ -4,10 +4,8 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const { select_by_pos } = importLazy("./dal/repl_table")
-const table_objects_drop = importLazy("./table_objects_drop")
+const { select_by_pos } = require("./dal/repl_table")
+const table_objects_drop = require("./table_objects_drop")
 
 
 

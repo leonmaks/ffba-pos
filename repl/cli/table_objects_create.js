@@ -2,27 +2,25 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
+const columns = require("@db/cat/columns")
+const table_create = require("@db/cat/table_create")
 
-const columns = importLazy("@db/cat/columns")
-const table_create = importLazy("@db/cat/table_create")
+const table_init = require("./table_init")
 
-const table_init = importLazy("./table_init")
+const trigger_function_ai_create = require("./trigger_function_ai_create")
+const trigger_function_au_create = require("./trigger_function_au_create")
+const trigger_function_bd_create = require("./trigger_function_bd_create")
 
-const trigger_function_ai_create = importLazy("./trigger_function_ai_create")
-const trigger_function_au_create = importLazy("./trigger_function_au_create")
-const trigger_function_bd_create = importLazy("./trigger_function_bd_create")
-
-const trigger_ai_create = importLazy("./trigger_ai_create")
-const trigger_au_create = importLazy("./trigger_au_create")
-const trigger_bd_create = importLazy("./trigger_bd_create")
+const trigger_ai_create = require("./trigger_ai_create")
+const trigger_au_create = require("./trigger_au_create")
+const trigger_bd_create = require("./trigger_bd_create")
 
 const {
   CLI_REPL_TABLE_PFX,
   REPL_COL_ID,
   REPL_COL_OP,
   REPL_COL_CREATE_DT,
-} = importLazy("../defs")
+} = require("../defs")
 
 
 

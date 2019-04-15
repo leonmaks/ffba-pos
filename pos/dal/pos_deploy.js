@@ -4,13 +4,11 @@
 
 "use strict"
 
-const importLazy = require("import-lazy")(require)
-
-const path = importLazy("path")
+const path = require("path")
 
 const {
   pathType,
-} = importLazy("../defs")
+} = require("../defs")
 
 const {
   deploy_select,
@@ -19,7 +17,7 @@ const {
   deploy_status_update,
   path_tree_select,
   log_insert
-} = importLazy("../sql/pos_deploy")
+} = require("../sql/pos_deploy")
 
 
 const deploySelect = async (db, params) => db.any(deploy_select, params)
