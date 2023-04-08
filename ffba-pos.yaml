@@ -1,6 +1,0 @@
-local:
-  ident: elta_00000
-  home : D:\ffba-pos
-
-srv:
-  db_params: postgres://pos_00000:p__@eltacafe.ru/ffba_prod
