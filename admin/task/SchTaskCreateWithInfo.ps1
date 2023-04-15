@@ -17,15 +17,16 @@
     <IdleSettings>
       <Duration>PT10M</Duration>
       <WaitTimeout>PT1H</WaitTimeout>
-      <StopOnIdleEnd>true</StopOnIdleEnd>
+      <StopOnIdleEnd>false</StopOnIdleEnd>
       <RestartOnIdle>false</RestartOnIdle>
     </IdleSettings>
+    <ExecutionTimeLimit>PT60M</ExecutionTimeLimit>
   </Settings>
   <Triggers>
     <TimeTrigger>
       <StartBoundary>2019-01-18T08:45:00</StartBoundary>
       <Repetition>
-        <Interval>PT5M</Interval>
+        <Interval>PT1M</Interval>
       </Repetition>
     </TimeTrigger>
   </Triggers>
@@ -44,7 +45,7 @@ if (-not (Test-Path env:POS_HOME)) {
 $taskname = "\FFBA-POS-Task"
 $author = "ffba-pos"
 $userid = "S-1-5-18"
-$command = $dirname + "\" + "pos_task.bat"
+$command = $dirname + "\" + "pos_tasks.bat"
 $filepath = "ffba-pos-task.xml"
 
 $xmlinfo.Task.RegistrationInfo.URI = $taskname
