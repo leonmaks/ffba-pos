@@ -1,0 +1,28 @@
+{
+  "name": "ffba-pos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./build ./node_modules",
+    "build": "tsc",
+    "rebuild": "rimraf ./build && tsc",
+    "start": "tsc && node build/index.js",
+    "dev:admin": "concurrently \"tsc -w\" \"nodemon build/admin.js\"",
+    "dev:main": "concurrently \"tsc -w\" \"nodemon build/main.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22",
+    "rimraf": "^4.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "node-windows": "^1.0.0-beta.8"
+  }
+}

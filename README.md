@@ -1,2 +1,2 @@
 # ffba-pos
-FFBA POS automation 2
+FFBA POS - Distribution Set

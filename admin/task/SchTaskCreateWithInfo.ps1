@@ -45,7 +45,7 @@ if (-not (Test-Path env:POS_HOME)) {
 $taskname = "\FFBA-POS-Task"
 $author = "ffba-pos"
 $userid = "S-1-5-18"
-$command = $dirname + "\" + "pos_tasks.bat"
+$command = $dirname + "\" + "pos-tasks.bat"
 $filepath = "ffba-pos-task.xml"
 
 $xmlinfo.Task.RegistrationInfo.URI = $taskname
